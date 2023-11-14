@@ -3,7 +3,33 @@
 label start:
     
     #Música tranquila
+    show CH_Porteiro  # Mostra um personagem
+    with dissolve     # Efeito de transição
+    ChP "Olá, sejam bem-vindos ao nosso exercício prático em formato de história interativa."
+    ChP "Aqui veremos exemplos reais de coisas que podem acontecer na vida profissional de um porteiro."
+    ChP "Seu papel será tomar as decisões certas de acordo com cada situação apresentada,"
+    ChP "desse modo, poderemos entender como o porteiro influencia no funcionamento de um condomínio."
+    ChP "Esse primeiro jogo fala sobre as normas e recomendações de como agir em caso de incêndio."
+    ChP "Está preparado?"
+
+    menu:
+     "Sim":
+      jump cena_00
+      return
+
+     "Não":
+      ChP "Não se preocupe, reveja o material se precisar."
+      ChP "Respire fundo e vamos um passo de cada vez."
+      ChP "Lembre-se, você sempre poderá recomeçar quando quiser."
+      ChP "Vamos em frente?"
+      menu:
+       "Sim!":
+        jump cena_00
+        return
+
+label cena_00:
     
+    hide CH_Porteiro
     show BG_Exterior_Cond at zoom
     
     "Em uma manhã tranquila no condomínio CondEduc..."
