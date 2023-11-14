@@ -9,8 +9,16 @@ label minijogo01 :
  show BG_Portaria
  #show screen noframe_quest01
  with fade
- "Respire fundo e clique na tela no momento certo."
+ 
+"Antes de acalmar o próximo, precisamos primeiro nos acalmar."
+ "Lembre-se: em qualquer situação de emergência, o resultado será melhor se agirmos com paciência."
+ "Um botão irá aparecer no momento certo, respire fundo e clique nele."
+ "Mas seja preciso e eficiente, se demorar demais ele pode acabar sumindo."
+ "Ah! Não se desespere, se perder a oportunidade, o botão vai aparecer de novo."
+ "É só esperar."
+ "Preparado?"
 
+ hide CH_Porteiro
  jump minijogo01_espera
 
 label minijogo01_espera:
@@ -48,11 +56,16 @@ label minijogo02:
 
   "microfone":
    "Tem certeza que essa é a melhor opção?"
+   "O microfone é um instrumento ligado à rede elétrica,"
+   "usá-lo em um momento de incêncio pode trazer riscos para a sua segurança."
+   "Tente novamente, na próxima vai!"
    jump minijogo02
    return
 
   "fone de ouvido":
    "Tem certeza que essa é a melhor opção?"
+   "O fone de ouvido não é um instrumento de comunicação direta com o público à sua volta."
+   "Tente novamente, eu sei que você consegue."
    jump minijogo02
    return
 
@@ -67,7 +80,9 @@ label minijogo03:
  return
 
 label pergunta01:
+ "Seguindo pelas escadas, conseguimos perceber várias pessoas que ficaram para trás." 
  "Quem salvar primeiro?"
+ "Clique na imagem da pessoa que você acha ser a opção correta."
 
  menu:
   "Uma idosa":
