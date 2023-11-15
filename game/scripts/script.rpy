@@ -36,17 +36,17 @@ label cena_00:
 
     #SFX alarme de incêndio
     #Música agitada
-    #Hue red to white
     show BG_Portaria # Mostra um cenário
-    show CH_Porteiro  # Mostra um personagem
-    hide BG_Exterior_Cond
-    with fade         # Efeito de transição
+    show CH_Porteiro
+    with flashbulb
     
+    hide BG_Exterior_Cond
+
     # Adiciona linhas do diálogo com nome do personagem
     ChP"Mas o quê?!"
 
     show BG_Corredor
-    with dissolve
+    with flashbulb
 
     #SFX Passos
     show CH_Multidao
@@ -62,12 +62,12 @@ label cena_00:
     show BG_Portaria
     show CH_Porteiro
     hide BG_Corredor
-    with fade
+    with flashbulb
 
     ChP "Por favor, não corram, isso vai acabar machucando alguém!"
     
     show BG_Corredor
-    with dissolve
+    with flashbulb
 
     #SFX Passos
     show CH_Multidao
@@ -90,17 +90,16 @@ label cena_00:
 label cena01:
 
  #Música épica
- #Hue red to white
  show BG_Portaria
  show CH_Porteiro
- with fade
+ with flashbulb
 
  ChP "Organizadamente, peço que andem até a portaria, sem correria, pois vão acabar tropeçando e quem ainda está lá dentro não vai conseguir sair."
  "Os moradores então obedeceram, e apesar do nervosismo, caminharam até a portaria." # Adiciona linhas do diálogo sem nome do personagem
  
  hide CH_Porteiro
  hide BG_Portaria
- with dissolve
+ with flashbulb
 
  # Esse comando pula para outra label
  jump minijogo03
@@ -113,7 +112,7 @@ label cena02:
  #Música tranquila
  show BG_Portaria
 
- "Logo em seguida, apareceu o morador do Bloco A/:"
+ "Logo em seguida, apareceu o morador do Bloco A\:"
 
  show CH_Morador
  with dissolve
