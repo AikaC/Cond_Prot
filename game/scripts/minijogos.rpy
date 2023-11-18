@@ -47,14 +47,16 @@ label minijogo02:
 
  "Precisamos chamar a atenção das pessoas. Clique em uma das três opções e escolha a ferramenta mais eficiente para isso."
 
- menu:
-  "megafone":
+ call screen Minijogo02
+ return
+
+ label megafone_resposta:
    "Muito bem, o megafone é um instrumento de ampliação de voz que não está conectado à rede elétrica."
    "Por isso, não haverá riscos de ser utilizado em caso de incêndio."
    jump minijogo03
    return
 
-  "microfone":
+ label microfone_resposta:
    "Tem certeza que essa é a melhor opção?"
    "O microfone é um instrumento ligado à rede elétrica,"
    "usá-lo em um momento de incêncio pode trazer riscos para a sua segurança."
@@ -62,7 +64,7 @@ label minijogo02:
    jump minijogo02
    return
 
-  "fone de ouvido":
+ label fone_resposta:
    "Tem certeza que essa é a melhor opção?"
    "O fone de ouvido não é um instrumento de comunicação direta com o público à sua volta."
    "Tente novamente, eu sei que você consegue."
@@ -84,13 +86,15 @@ label pergunta01:
  "Quem salvar primeiro?"
  "Clique na imagem da pessoa que você acha ser a opção correta."
 
- menu:
-  "Uma idosa":
+ call screen Minijogo03_pergunta01
+ return
+
+label idosa_resposta:
    "Isso mesmo, precisamos ajudar primeiro aqueles com mais dificuldade de agilidade"
    jump pergunta02
    return
 
-  "Uma jovem mulher":
+label mulher_resposta:
    "Talvez seja melhor dar prioridade aos mais velhos e pessoas com dificuldade de locomoção, não?"
    jump pergunta01
    return
@@ -99,13 +103,15 @@ label pergunta02:
 
  "Quem salvar primeiro?"
 
- menu:
-  "Um homem de terno":
+ call screen Minijogo03_pergunta02
+ return
+
+label terno_resposta:
    "Não se deixe levar pelas aparências, ajude aqueles com dificuldade de locomoção."
    jump pergunta01
    return
 
-  "Um homem com a perna quebrada":
+label PernaQuebrada_resposta:
    "Em cheio! Precisamos ajudar primeiro aqueles com mais dificuldade de locomoção"
    jump pergunta03
    return
@@ -114,13 +120,15 @@ label pergunta03:
 
  "Quem salvar primeiro?"
 
- menu:
-  "Uma mulher cheia de malas":
+ call screen Minijogo03_pergunta03
+ return
+
+label malas_resposta:
    "Talvez seja melhor orientar a mulher a deixar as malas por enquanto e dar mais atenção para a criança que possui menos autonomia."
    jump pergunta01
    return
 
-  "Uma criança":
+label crianca_resposta:
    "Muito bem! Você já está a meio passo de se tornar um porteiro de alta eficiência. Continue assim."
    jump cena02
    return
