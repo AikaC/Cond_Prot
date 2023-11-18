@@ -14,14 +14,8 @@ image CH_Porteiro = "Personagens/CH_Porteiro.jpg"
 
 ## NPCS
 
-image Ch_crianca = "Personagens/Ch_crianca.jpg"
-image CH_homem_terno = "Personagens/CH_homem_terno.jpg"
-image CH_mulher_jovem = "Personagens/CH_mulher_jovem.jpg"
-image CH_mulher_malas = "Personagens/CH_mulher_malas.jpg"
 image CH_Multidao = "Personagens/CH_Multidao.png"
-image CH_perna_quebrada = "Personagens/CH_perna_quebrada.jpg"
 image CH_Morador = "Personagens/CH_Morador.jpg"
-image CH_senhora = "Personagens/CH_senhora.jpg"
 
 ### Cenários ###
 
