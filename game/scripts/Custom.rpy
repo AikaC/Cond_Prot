@@ -28,3 +28,28 @@ screen noframe_quest01:
     xalign 0.1 yalign 0.1
 
     text _("Respire fundo e clique na tela no momento certo.")
+
+###### Declare os botões em imagens aqui ######
+
+# Usado no segundo minijogo - atribui imagem ao botão
+screen Minijogo02:
+    hbox xsize 1920:
+        imagebutton auto "Sprites/Sprite_Megafone_%s.jpg" action Jump("megafone_resposta") xalign 0.3
+        imagebutton auto "Sprites/Sprite_microphone_%s.jpg" action Jump("microfone_resposta") xalign 0.5
+        imagebutton auto "Sprites/Sprite_phone_%s.jpg" action Jump("fone_resposta") xalign 0.8
+
+# Usado no terceiro minijogo - atribui imagem ao botão
+screen Minijogo03_pergunta01:
+    hbox xsize 1920:
+        imagebutton auto "Personagens/CH_senhora_%s.jpg" action Jump("idosa_resposta") xalign 0.3
+        imagebutton auto "Personagens/CH_mulher_jovem_%s.png" action Jump("mulher_resposta") xalign 0.8
+
+screen Minijogo03_pergunta02:
+    hbox xsize 1920:
+        imagebutton auto "Personagens/CH_homem_terno_%s.jpg" action Jump("terno_resposta") xalign 0.3
+        imagebutton auto "Personagens/CH_perna_quebrada_%s.png" action Jump("PernaQuebrada_resposta") xalign 0.8
+
+screen Minijogo03_pergunta03:
+    hbox xsize 1920:
+        imagebutton auto "Personagens/CH_mulher_malas_%s.jpg" action Jump("malas_resposta") xalign 0.3
+        imagebutton auto "Personagens/Ch_crianca_%s.jpg" action Jump("crianca_resposta") xalign 0.8
