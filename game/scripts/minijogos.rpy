@@ -24,22 +24,16 @@ label minijogo01 :
 label minijogo01_espera:
 
  #Musica calma
- pause 1.0
- 
- jump minijogo01_aperta
+ pause 2.0
+ call screen timer
 
  return
 
-label minijogo01_aperta:
+screen timer():
+    vbox:
+         textbutton "Agora!" action Jump("minijogo02")
 
- menu:
-  "Agora!":
-   #hide screen noframe_quest01
-   jump minijogo02
- pause 0.5
- jump minijogo01_espera
-
- return
+    timer 1.0 action Jump("minijogo01_espera")
 
 ### Minijogo 02 - Comunique-se ###
 
