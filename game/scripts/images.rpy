@@ -26,11 +26,3 @@ image BG_Exterior_Cond = "Cenários/BG_Exterior_Cond.jpg"
 image BG_Mesa_Minijogo2 = "Cenários/BG_Mesa_Minijogo2.jpg"
 image BG_Portaria = "Cenários/BG_Portaria.jpg"
 image BG_Stairs = "Cenários/BG_Stairs.jpg"
-
-### Sprites ###
-
-image Sprt_Circulo = "Sprites/circulo.png"
-image Sprt_Circunf = "Sprites/circ.png"
-image Sprt_Megafone = "Sprites/Sprite_Megafone.jpg"
-image Sprt_Microphone = "Sprites/Sprite_microphone.jpg"
-image Sprt_Phone = "Sprites/Sprite_phone.jpg"
