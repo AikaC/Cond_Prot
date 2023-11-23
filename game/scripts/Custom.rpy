@@ -29,14 +29,26 @@ screen noframe_quest01:
 
     text _("Respire fundo e clique na tela no momento certo.")
 
+#  Barra de Pontos
+screen noframe_pontos:
+ text _("Pontos")
+
+ bar:
+   value pontos # valor inicial definido no script antes da label start
+   range 8 #Pontuação máxima
+   left_bar "gui/bar/left.png" #Imagem da barra cheia
+   right_bar "gui/bar/right.png" #Imagem da barra vazia
+   xysize(200,25) #tamanho da barra
+   xalign 0.05 #alinhamento/posição da barra
+
 ###### Declare os botões em imagens aqui ######
 
 # Usado no segundo minijogo - atribui imagem ao botão
 screen Minijogo02:
     hbox xsize 1920:
-        imagebutton auto "Sprites/Sprite_Megafone_%s.jpg" action Jump("megafone_resposta") xalign 0.3
-        imagebutton auto "Sprites/Sprite_microphone_%s.jpg" action Jump("microfone_resposta") xalign 0.5
-        imagebutton auto "Sprites/Sprite_phone_%s.jpg" action Jump("fone_resposta") xalign 0.8
+        imagebutton auto "Sprites/Sprite_Megafone_%s.png" action Jump("megafone_resposta") xalign 0.3
+        imagebutton auto "Sprites/Sprite_microphone_%s.png" action Jump("microfone_resposta") xalign 0.5
+        imagebutton auto "Sprites/Sprite_phone_%s.png" action Jump("fone_resposta") xalign 0.8
 
 # Usado no terceiro minijogo - atribui imagem ao botão
 screen Minijogo03_pergunta01:
