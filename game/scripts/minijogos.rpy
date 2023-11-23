@@ -7,10 +7,12 @@ label minijogo01 :
  # Musica agitada
 
  show BG_Portaria
+ show CH_Porteiro
+ show screen noframe_pontos
+
  #show screen noframe_quest01
  with fade
- 
-"Antes de acalmar o próximo, precisamos primeiro nos acalmar."
+ "Antes de acalmar o próximo, precisamos primeiro nos acalmar."
  "Lembre-se: em qualquer situação de emergência, o resultado será melhor se agirmos com paciência."
  "Um botão irá aparecer no momento certo, respire fundo e clique nele."
  "Mas seja preciso e eficiente, se demorar demais ele pode acabar sumindo."
@@ -19,7 +21,7 @@ label minijogo01 :
  "Preparado?"
 
  hide CH_Porteiro
- jump minijogo01_espera
+ call minijogo01_espera
 
 label minijogo01_espera:
 
@@ -38,7 +40,9 @@ screen timer():
 ### Minijogo 02 - Comunique-se ###
 
 label minijogo02:
-
+ $ pontos = 2
+ hide BG_Portaria
+ show BG_Mesa_Minijogo2
  "Precisamos chamar a atenção das pessoas. Clique em uma das três opções e escolha a ferramenta mais eficiente para isso."
 
  call screen Minijogo02
@@ -47,7 +51,9 @@ label minijogo02:
  label megafone_resposta:
    "Muito bem, o megafone é um instrumento de ampliação de voz que não está conectado à rede elétrica."
    "Por isso, não haverá riscos de ser utilizado em caso de incêndio."
-   jump minijogo03
+   $ pontos += 2
+   hide screen noframe_pontos
+   jump cena01
    return
 
  label microfone_resposta:
@@ -68,7 +74,9 @@ label minijogo02:
 ### Minijogo 03 - Ajude os mais vulneráveis ###
 
 label minijogo03:
-
+ hide BG_Mesa_Minijogo2
+ show BG_Stairs
+ show screen noframe_pontos
  "Assim que todos se acalmaram e a maioria foi para o local indicado, Carlos percebeu que ainda haviam algumas pessoas para trás."
  "Após garantir a segurança da portaria, Carlos foi ajudar aqueles que precisavam."
 
@@ -85,6 +93,7 @@ label pergunta01:
 
 label idosa_resposta:
    "Isso mesmo, precisamos ajudar primeiro aqueles com mais dificuldade de agilidade"
+   $ pontos += 2
    jump pergunta02
    return
 
@@ -107,6 +116,7 @@ label terno_resposta:
 
 label PernaQuebrada_resposta:
    "Em cheio! Precisamos ajudar primeiro aqueles com mais dificuldade de locomoção"
+   $ pontos += 2
    jump pergunta03
    return
 
@@ -124,5 +134,6 @@ label malas_resposta:
 
 label crianca_resposta:
    "Muito bem! Você já está a meio passo de se tornar um porteiro de alta eficiência. Continue assim."
+   $ pontos += 2
    jump cena02
    return
