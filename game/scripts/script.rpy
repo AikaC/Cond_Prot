@@ -1,3 +1,7 @@
+#Sistema de pontos
+init python:
+ pontos = 0
+
 # O script do jogo fica nesse arquivo
 
 label start:
@@ -14,6 +18,13 @@ label start:
 
     menu:
      "Sim":
+      show screen noframe_pontos
+      ChP "Que da hora!{p}Consegue ver essa barra de pontos ali em cima da tela?"
+      ChP "Cada resposta certa faz a barra aumentar."
+      ChP "Você só vai ganhar o jogo quando conseguir a pontuação máxima."
+      ChP "Mas sem pressão.{p}Eu vou estar aqui o tempo todo para te ajudar."
+      ChP "Hora de pôr mãos a obras."
+      hide screen noframe_pontos
       jump cena_00
       return
 
@@ -39,9 +50,9 @@ label cena_00:
     show BG_Portaria # Mostra um cenário
     show CH_Porteiro
     with flashbulb
-    
-    hide BG_Exterior_Cond
 
+    hide BG_Exterior_Cond
+    
     # Adiciona linhas do diálogo com nome do personagem
     ChP"Mas o quê?!"
 
@@ -111,6 +122,7 @@ label cena02:
 
  #Música tranquila
  show BG_Portaria
+ hide screen noframe_pontos
 
  "Logo em seguida, apareceu o morador do Bloco A\:"
 
@@ -129,4 +141,15 @@ label cena02:
  "pois um acidente de verdade poderia ter ocorrido aqui."
 
  hide BG_Portaria
+ jump cena_final
  return
+
+label cena_final:
+
+ "E aí? O que achou dessa aventura?"
+ "Essa é uma forma que a CondEduc pensou para ajudar você, futuro porteiro de qualidade,"
+ "A se divertir enquanto aprende."
+ "Viu só quanta coisa aprendemos nos divertindo?"
+ "Agora que você já está fera na parte de prevenção de combate e incêndio,"
+ "vamos seguir em frente com os próximos assuntos."
+ "Te vejo em breve."
